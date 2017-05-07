@@ -2,18 +2,22 @@
 <HTML lang = "en-us">
 <HEAD>
 	<meta charset = "UTF-8">
-	<title>Street Fighter RPG Game</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<link rel = "stylesheet" type = "text/css" href = "assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
 	<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+	<title>Street Fighter RPG Game</title>
 </HEAD>
 
 <BODY>
+<audio autoplay="autoplay" loop="loop"><source src="assets/audio/background.mp3" type="audio/mpeg" /></audio>
 	<div class = "container" id = "page">
 		<div class = "row">
-			<h1>Street Fighter RPG!</h1>
+			<div class = "col-lg-8 title">
+				<h1>Street Fighter RPG!</h1>
+			</div>
 		</div>
 		<div class = "row">
 			<div class = "col-lg-8">
@@ -21,23 +25,23 @@
 					<div class = "col-md-3 character" id = "ryu">
 						<div class = "border">
 							<p class = "nameText">Ryu</p>
-							<img src = "https://upload.wikimedia.org/wikipedia/en/e/e5/Ryu_TvC.png" alt = "Ryu" width = "140" height = "180" id = "ryuImage">
+							<img src = "http://i.imgur.com/Yuxlzn9.gif" alt = "Ryu" width = "140" height = "180" id = "ryuImage">
 							<p class = "ryu player hpText" id = "r">120</p>
 						</div>
 					</div>
 
-					<div class = "col-md-3 character" id = "blanka">
+					<div class = "col-md-3 character" id = "guile">
 						<div class = "border">
-							<p class = "nameText">Blanka</p>
-							<img src = "http://vignette3.wikia.nocookie.net/streetfighter/images/4/4a/Blanka_SfxT.png/revision/latest?cb=20120519202850" alt = "Blanka" width = "140" height = "180" id = "blankaImage">
-							<p class = "blanka player hpText">100</p>
+							<p class = "nameText">Guile</p>
+							<img src = "http://i.imgur.com/9FLk87n.gif" alt = "guile" width = "140" height = "180" id = "blankaImage">
+							<p class = "guile player hpText">100</p>
 						</div>
 					</div>
 					
 					<div class = "col-md-3 character" id = "ken">
 						<div class = "border">
 							<p class = "nameText">Ken</p>
-							<img src = "http://vignette2.wikia.nocookie.net/streetfighter/images/8/8a/Ken_big.jpg/revision/latest?cb=20080212064647" alt = "Ken" width = "140" height = "180" id = "kenImage">
+							<img src = "http://i.imgur.com/008qMr5.gif" alt = "Ken" width = "140" height = "180" id = "kenImage">
 							<p class = "ken player hpText">150</p>
 						</div>
 					</div>
@@ -45,14 +49,14 @@
 					<div class = "col-md-3 character" id = "dhalsim">
 						<div class = "border">
 							<p class = "nameText">Dhalsim</p>
-							<img src = "http://vignette2.wikia.nocookie.net/streetfighter/images/7/7b/SvCCFDS-Dhalsim.png/revision/latest?cb=20151102011048" alt = "Dhalsim" width = "140" height = "180" id = "dhalsimImage">
+							<img src = "http://i.imgur.com/n8u0Ogr.gif" alt = "Dhalsim" width = "140" height = "180" id = "dhalsimImage">
 							<p class = "dhalsim player hpText">180</p>
 						</div>
 					</div>
 						
 				</div>
 				<div class = "panel-footer">
-					<h3>Your Character</h3>
+					<h3>Choose Your Character</h3>
 				</div>
 			</div>
 		</div>
@@ -63,18 +67,18 @@
 					
 				</div>
 				<div class = "panel-footer">
-					<h3>Enemies Available to Attack</h3>
+					<h3>Choose an Enemy to Attack</h3>
 				</div>
 			</div>
 		</div>
 
 		<div class = "row">
 			<div class = "col-lg-8">
-				<div class = "panel-heading">
-					<h3>Fight Section</h3>
+				<div class = "panel-heading attackButton">
+					<h3>Click the button to Attack!</h3>
 				</div>
-				<div class = "panel-body">
-					<button type="button" class="btn btn-default attack">Attack</button>
+				<div class = "panel-body buttonBody">
+					<button type="button" class="btn btn-danger btn-lg attack">Attack</button>
 				</div>
 			</div>
 		</div>
@@ -85,7 +89,12 @@
 					<h3>Fight Stage</h3>
 				</div>
 				<div class = "panel-body fight">
-
+					<div class = "col-md-4 playerSpot">
+					</div>
+					<div class = "col-md-4 vsSpot">
+					</div>
+					<div class = "col-md-4 enemySpot">
+					</div>
 				</div>
 				<div class = "panel-body attackText">
 
